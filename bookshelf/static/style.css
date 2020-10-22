@@ -199,3 +199,62 @@ button::-moz-focus-inner {
   background-color: hsl(220, 32%, 18%);
   color: hsl(220, 30%, 80%);
 }
+
+table.booktable {
+  border: 1px solid #5500A4;
+  background-color: #C9C9C9;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.booktable td, table.booktable th {
+  border: 2px solid #AAAAAA;
+  padding: 3px 2px;
+}
+table.booktable tbody td {
+  font-size: 13px;
+  font-weight: bold;
+}
+table.booktable tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.booktable thead {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #444444;
+}
+table.booktable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #D0E4F5;
+}
+table.booktable thead th:first-child {
+  border-left: none;
+}
+
+table.booktable tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #D0E4F5;
+  background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+  border-top: 2px solid #444444;
+}
+table.booktable tfoot td {
+  font-size: 14px;
+}
+table.booktable tfoot .links {
+  text-align: right;
+}
+table.booktable tfoot .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
