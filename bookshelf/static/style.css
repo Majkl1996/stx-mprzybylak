@@ -100,7 +100,7 @@ button::-moz-focus-inner {
 }
 
 .field:focus-within {
-  background-color: hsl(220, 30%, 92%);
+  background-color: hsl(220, 30%, 65%);
   box-shadow: 0 2px 6px hsla(220, 10%, 10%, 0.5),
     0 2px 12px hsla(220, 10%, 10%, 0.5);
 }
