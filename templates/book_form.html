@@ -28,7 +28,12 @@
         </header>
         <form class="form" action="" method="post">
         {% csrf_token %}
-        {{ form }}
+        <label for="{{ form.title.id_for_label }}">Search for an author</label>
+        <label for="{{ form.author.id_for_label }}">Search for an author</label>
+        <label for="{{ form.isbn.id_for_label }}">Search for an author</label>
+        <label for="{{ form.number_of_pages.id_for_label }}">Search for an author</label>
+        <label for="{{ form.cover_url.id_for_label }}">Search for an author</label>
+        <label for="{{ form.language.id_for_label }}">Search for an author</label>
         <input type="submit">
     </form>
     </main>
