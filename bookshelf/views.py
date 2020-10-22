@@ -10,8 +10,8 @@ key = 'AIzaSyDn7RdEeFhlGpO-4KTVWz57_uJQuZD9oJk'
 def books(request):
     if request.method == 'GET':
         books = Book.objects.all().order_by('title')
-        if ' ' not in books:
-            return render(request, "books.html", {"message": "Sorry, no books in here"})
+        # if ' ' not in books:
+          #   return render(request, "books.html", {"message": "Sorry, no books in here"})
         return render(request, "books.html", locals())
 
 

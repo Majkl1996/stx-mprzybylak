@@ -29,35 +29,30 @@
       </a>
       </header>
     {% if books %}
-    <ul class="grid">
-      {% for book in books %}
-
-      <li class="card">
-        <h2 class="card__title">
-          <a class="card__link" href="{{ book.info }}">{{ book.title }}</a>
-        </h2>
-        <img
-          class="card__image"
-          width="128"
-          height="190"
-          src="{{ book.image }}"
-          alt="{{ book.title }}"
-        />
-        <div class="card__author">by {{ book.authors }}</div>
-        <div class="card__publisher">{{ book.publisher }}</div>
-      </li>
-
-      {% endfor %}
-    </ul>
-    {% else %}
-    <div class="error">
-      <h2>
-        {{ message }}
-      </h2>
-    </div>
-
+    <table rules="all">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Date of publication</th>
+            <th>ISBN</th>
+            <th>Pages</th>
+            <th>Cover</th>
+            <th>Language</th>
+        </tr>
+        {% for book in books %}
+            <tr>
+                <td><a href="{% url 'edit' book.id %}">{{ book.title }}</a></td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.date_of_publication }}</td>
+                <td>{{ book.isbn }}</td>
+                <td>{{ book.number_of_pages }}</td>
+                <td>{{ book.cover_url }}</td>
+                <td>{{ book.language }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'add' %}">Dodaj pozycję</a>
     {% endif %}
-
     <a href="{% url 'add' %}" class="site-header">Add book</a>
     <a href="{% url 'search' %}" class="site-header">Search book</a>
     </div>
