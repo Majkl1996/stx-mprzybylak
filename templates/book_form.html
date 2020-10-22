@@ -28,90 +28,30 @@
         </header>
         <form class="form" action="" method="post">
         {% csrf_token %}
+        <label for="{{ form.title.id_for_label }}">Title</label>
         <div class="field">
           {{ form.title }}
-          <button class="field__button">
-            <svg
-              viewBox="0 0 32 32"
-              width="32"
-              height="32"
-              fill="none"
-              stroke="currentcolor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            >
-              <circle cx="14" cy="14" r="12"></circle>
-              <path d="M23 23 L30 30"></path>
-            </svg>
-          </button>
-        </div>
-        <label for="{{ form.title.id_for_label }}">Title</label>
-            <div class="field">
-          {{ form.author }}
-          <button class="field__button">
-            <svg
-              viewBox="0 0 32 32"
-              width="32"
-              height="32"
-              fill="none"
-              stroke="currentcolor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            >
-              <circle cx="14" cy="14" r="12"></circle>
-              <path d="M23 23 L30 30"></path>
-            </svg>
-          </button>
         </div>
         <label for="{{ form.author.id_for_label }}">Author</label>
         <div class="field">
-          {{ form.isbn }}
-          <button class="field__button">
-            <svg
-              viewBox="0 0 32 32"
-              width="32"
-              height="32"
-              fill="none"
-              stroke="currentcolor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            >
-              <circle cx="14" cy="14" r="12"></circle>
-              <path d="M23 23 L30 30"></path>
-            </svg>
-          </button>
+          {{ form.author }}
         </div>
         <label for="{{ form.isbn.id_for_label }}">ISBN</label>
         <div class="field">
-          {{ form.number_of_pages }}
-          <button class="field__button">
-            <svg
-              viewBox="0 0 32 32"
-              width="32"
-              height="32"
-              fill="none"
-              stroke="currentcolor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            >
-              <circle cx="14" cy="14" r="12"></circle>
-              <path d="M23 23 L30 30"></path>
-            </svg>
-          </button>
+          {{ form.isbn }}
         </div>
         <label for="{{ form.number_of_pages.id_for_label }}">Pages</label>
         <div class="field">
-          {{ form.cover_url }}
+          {{ form.number_of_pages }}
         </div>
         <label for="{{ form.cover_url.id_for_label }}">Cover URL</label>
-        <div class="field__input">
-          {{ form.language }}
+        <div class="field">
+          {{ form.cover_url }}
         </div>
         <label for="{{ form.language.id_for_label }}">Language</label>
+        <div class="field">
+          {{ form.language }}
+        </div>
         <input type="submit" class="field__button">
     </form>
     </main>
